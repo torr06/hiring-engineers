@@ -1,0 +1,22 @@
+	Say what's Happening section:
+	{{#is_alert}} 
+	My metric over 800. Something has to be done about this value  {{value}} on {{host.name}} with ip{{host.ip}}
+	{{/is_alert}}
+	
+	{{#is_recovery}} my metric recovered. crisis averted. {{/is_recovery}}
+	
+	
+	{{#is_warning}}
+	My metric above warning threshold {{warn_threshold}}. Value is now {{value}} on {{host.name}}
+	{{/is_warning}}
+	
+	{{#is_warning_recovery}}
+	Your warning has recovered.  mymetric is below the threshold on {{host.name}}. value is {{value}}
+	{{/is_warning_recovery}}
+	
+	
+	{{#is_no_data}}
+	Doctor there is no heartbeat on {{host.name}} . the data stream has stopped.
+	{{/is_no_data}}
+	
+	notify: @tlgordon06@gmail.com
